@@ -1,0 +1,95 @@
+const userPermissions = [
+  "getServices",
+  "addColorCorrection",
+  "addRealEstate",
+  "addVideoEditing",
+  "addSmartAlbum",
+  "addWeddingAlbum",
+  "addRetouching",
+  "addCulling",
+  "addTrial",
+  "getPendingOrders",
+  "createPayment",
+  "executePayment",
+  "cancelPayment",
+];
+const adminPermissions = [
+  "addService",
+  "getServices",
+  "getColorCorrections",
+  "addColorCorrection",
+  "addRealEstate",
+  "getRealEstates",
+  "addVideoEditing",
+  "getVideoEditings",
+  "addSmartAlbum",
+  "getSmartAlbums",
+  "addWeddingAlbum",
+  "getWeddingAlbums",
+  "addRetouching",
+  "getRetouchings",
+  "updateRealEstate",
+  "updateRetouching",
+  "updateWeddingAlbum",
+  "updateSmartAlbum",
+  "updateRetouching",
+  "updateColorCorrection",
+  "updateVideoEditing",
+  "updateCulling",
+  "addCulling",
+  "getCullings",
+  "getTrials",
+  "getPendingOrders",
+  "getAllUsers",
+  "updateUserStatus",
+  "updateUserRole",
+  "createPayment",
+  "executePayment",
+  "cancelPayment",
+  "addBlogs",
+];
+const managerPermission = [
+  "updateRealEstate",
+  "updateRetouching",
+  "updateWeddingAlbum",
+  "updateSmartAlbum",
+  "updateRetouching",
+  "updateColorCorrection",
+  "updateVideoEditing",
+  "updateCulling",
+  "createPayment",
+  "getPendingOrders",
+  "executePayment",
+  "cancelPayment",
+  "getAllUsers",
+];
+
+const editorPermission = [
+  "updateRealEstate",
+  "updateRetouching",
+  "updateWeddingAlbum",
+  "updateSmartAlbum",
+  "updateRetouching",
+  "updateColorCorrection",
+  "getPendingOrders",
+  "updateVideoEditing",
+  "updateCulling",
+  "createPayment",
+  "executePayment",
+  "cancelPayment",
+];
+
+const allRoles = {
+  user: userPermissions,
+  admin: adminPermissions,
+  manager: managerPermission,
+  editor: editorPermission,
+};
+
+const roles = Object.keys(allRoles);
+const roleRights = new Map(Object.entries(allRoles));
+
+module.exports = {
+  roles,
+  roleRights,
+};
